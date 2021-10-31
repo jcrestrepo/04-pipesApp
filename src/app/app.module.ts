@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
+//Modulo Personalizado
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
+import { SharedModule } from './shared/shared.module';
+import { AppRouterModule } from './app-router.module';
 
-// PrimeGN Module
-import {ButtonModule} from 'primeng/button';
+
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule,
+    AppRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
