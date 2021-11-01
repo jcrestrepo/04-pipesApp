@@ -1,1 +1,36 @@
-<p>no-comunes works!</p>
+<div class="text-layout">
+    <h1>Pipes no tan comunes</h1>
+    <p>
+        Pipes incluidos en angular - Usualmente incluidos en el Common   Module.
+    </p>
+
+</div>
+
+<div class="grid">
+    <div class="col md-6 sm-9">
+        <p-fieldset legend="i18nSelectPipe" [toggleable]="true" >
+           <p> Saludos {{nombre}}, es un placer  {{ genero | i18nSelect:invitacionobj }} a nuestro   evento
+            </p>
+            <button pButton class="p-button-help" type="button" label="Cambiar" (click)="cambiarPersona()"></button>
+        </p-fieldset>
+
+    </div>
+    <div class="col md-6">
+        <p-fieldset legend="i18nPluralPipe" [toggleable]="true">
+          <p>
+          Actualmente {{ clientes.length | i18nPlural:clientesMapa}}
+        </p>
+         
+          <button   pButton class="p-button-help pr-4" type="button" label="Adicionar" (Click)="adicionarCliente()"></button>
+          <button pButton class="p-button-help "type="button" label="Retirar" (Click)="retiraraCliente()"></button>
+        </p-fieldset>
+    </div>
+    <div class="col md-6 sm-9">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            <b>Original</b>
+            <span **ngFor="let cliente of clientes" > {{cliente}}</span>
+     
+        </p-fieldset>
+    </div>
+
+</div>
